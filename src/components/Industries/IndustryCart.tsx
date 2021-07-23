@@ -29,10 +29,10 @@ const IndustryCart: React.FC<Props> = (props) => {
   return (
     <React.Fragment>
       <h3>Cart</h3>
-      {displayedCart?.map((industry: Industry) => {
+      {displayedCart?.map((industry: Industry, index: number) => {
         return (
           <li
-            key={industry.sic_code}
+            key={index}
             className={classes.cartElement}
             onClick={() => handleIndustryDelete(industry)}
           >
